@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buspe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #100720;
+      margin: 0;
+      padding: 0;
+      font-family: 'Kanit', 'Poppins', 'Lato', Calibri, Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 1rem;
+      width: 95%;
+      max-width: 900px;
+      box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+      margin: 2rem auto;
+    }
+    img.header-logo {
+      max-width: 100%;
+      height: 100px;
+      margin: 2px 0;
+    }
+    .big-title {
+      color: rgb(63, 89, 88);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin: 10px 0;
+    }
+
+    .action-button {
+      width: 80%;
+      max-width: 265px;
+      height: 160px;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      cursor: pointer;
+      color: #fff;
+      border-radius: 1rem;
+      border: none;
+      position: relative;
+      background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+      margin: 10px auto;
+      transition: transform 0.3s ease;
+    }
+
+    .action-button::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+      filter: blur(15px);
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: inherit;
+    }
+
+    .action-button:hover {
+      transform: scale(0.95) rotate(3deg);
+      background: #100720;
+    }
+
+    .subtitle {
+      color: rgb(36, 198, 55);
+      font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .footer-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .action-button {
+        width: 265px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img
+      class="header-logo"
+      src="https://th-i.thgim.com/public/migration_catalog/article10538854.ece/alternates/FREE_1200/13hyskm06-TSRTChy14TSRTC-emblem.jp.jpg"
+      alt="logo"/>
+
+    <h1 class="big-title">BUSPE SERVICE</h1>
+    <button class="action-button" onclick="window.location.href='/index'"><b>Conductor</b></button>
+    <h2 class="subtitle">Click User to download the ticket</h2>
+    <button class="action-button" onclick="window.location.href='/user'"><b>User</b></button>
+    <p>Happy Journey</p>
+    
+  </div>
+</body>
+</html>
